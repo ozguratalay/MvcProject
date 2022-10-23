@@ -19,14 +19,23 @@ namespace DataAccessLayer.Concrete.Repositories
         }
         public void Add(T p)
         {
-            _object.Add(p);
+            var addedEntity = _context.Entry(p);
+            addedEntity.State = EntityState.Added;
+            //_object.Add(p); Entity State ile aynı işlevi gören kodu yazdığımız için bu koda gerek kalmıyor.
             _context.SaveChanges();
         }
 
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var deletedEntity = _context.Entry(p);
+            deletedEntity.State = EntityState.Deleted;
+            //_object.Remove(p);
             _context.SaveChanges();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
         }
 
         public List<T> List()
@@ -41,6 +50,8 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T p)
         {
+            var updatedEntity = _context.Entry(p);
+            updatedEntity.State = EntityState.Modified;
             _context.SaveChanges();
         }
     }
