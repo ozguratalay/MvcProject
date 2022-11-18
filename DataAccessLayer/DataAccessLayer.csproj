@@ -76,6 +76,10 @@
     <Compile Include="Migrations\202211161938561_OWriter.designer.cs">
       <DependentUpon>202211161938561_OWriter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211181937147_Title.cs" />
+    <Compile Include="Migrations\202211181937147_Title.designer.cs">
+      <DependentUpon>202211181937147_Title.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211161938561_OWriter.resx">
       <DependentUpon>202211161938561_OWriter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211181937147_Title.resx">
+      <DependentUpon>202211181937147_Title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
