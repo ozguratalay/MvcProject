@@ -15,7 +15,7 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string Surname { get; set; }
         public string FullName { get { return this.Name + " " + this.Surname; } }
-        [StringLength(100)]
+        [StringLength(250)]
         public string Image { get; set; }
         [StringLength(100)]
         public string About { get; set; }

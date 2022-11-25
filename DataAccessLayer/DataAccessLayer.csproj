@@ -80,6 +80,14 @@
     <Compile Include="Migrations\202211181937147_Title.designer.cs">
       <DependentUpon>202211181937147_Title.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211252105551_OWriterImageSize.cs" />
+    <Compile Include="Migrations\202211252105551_OWriterImageSize.designer.cs">
+      <DependentUpon>202211252105551_OWriterImageSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211252118045_Otest1234.cs" />
+    <Compile Include="Migrations\202211252118045_Otest1234.designer.cs">
+      <DependentUpon>202211252118045_Otest1234.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211181937147_Title.resx">
       <DependentUpon>202211181937147_Title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211252105551_OWriterImageSize.resx">
+      <DependentUpon>202211252105551_OWriterImageSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211252118045_Otest1234.resx">
+      <DependentUpon>202211252118045_Otest1234.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
