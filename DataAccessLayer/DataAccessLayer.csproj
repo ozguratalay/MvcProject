@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202211252118045_Otest1234.designer.cs">
       <DependentUpon>202211252118045_Otest1234.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211291619591_OWriterStatus.cs" />
+    <Compile Include="Migrations\202211291619591_OWriterStatus.designer.cs">
+      <DependentUpon>202211291619591_OWriterStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211252118045_Otest1234.resx">
       <DependentUpon>202211252118045_Otest1234.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211291619591_OWriterStatus.resx">
+      <DependentUpon>202211291619591_OWriterStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
