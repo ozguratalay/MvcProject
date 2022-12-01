@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-@{ string color = "";}
+@{ string color = ""; }
 
 
 <!DOCTYPE html>
@@ -27,23 +27,26 @@
                             </button>
                         </div>
                     </div>
-                    <div class="card-body p-0">
+                    <div class="card-body p-0 d-flex justify-content-between text-center">
                         <table class="table table-striped projects">
                             <thead>
                                 <tr>
-                                    <th style="width: 1%">
+                                    <th>
                                         ID
                                     </th>
-                                    <th style="width: 20%">
+                                    <th>
                                         Başlık Adı
                                     </th>
-                                    <th style="width: 30%">
+                                    <th>
                                         Yazar
                                     </th>
-                                    <th style="width: 8%" class="text-center">
+                                    <th>
+                                        Durum
+                                    </th>
+                                    <th>
                                         Kategori
                                     </th>
-                                    <th class="text-center" style="width: 20%">
+                                    <th>
                                         İşlemler
                                     </th>
                                 </tr>
@@ -86,6 +89,21 @@
                                             @item.Writer.Name  @item.Writer.Surname
                                         </small>
                                     </td>
+                                        @switch (item.Status==true)
+                                        {
+                                            case true:
+                                                <td class="text-success">
+                                                    Aktif
+                                                </td>
+                                                break;
+                                            case false:
+                                                    <td class="text-danger">
+                                                        Pasif
+                                                    </td>
+                                                    break;
+
+                                        }
+                                       
                                     <td class="project-state">
                                         <span class="@color">@item.Category.Name</span>
                                     </td>
@@ -95,16 +113,29 @@
                                             </i>
                                             Yazılar
                                         </a>
-                                        <a class="btn btn-info btn-sm" href="#">
+                                        <a class="btn btn-info btn-sm" href="/Heading/EditHeading/@item.Id">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Düzenle
                                         </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Sil
-                                        </a>
+                                        @switch (item.Status == true)
+                                        {
+                                            case true:
+                                                <a class="btn btn-danger btn-sm" href="/Heading/DeleteHeading/@item.Id">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Pasif Yap
+                                                </a>
+                                                break;
+                                            case false:
+                                                <a class="btn btn-success btn-sm" href="/Heading/DeleteHeading/@item.Id">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Aktif Yap
+                                                </a>
+                                                break;
+                                        }
+
                                     </td>
                                 </tr>                            
                                 }
@@ -128,7 +159,7 @@
             <th>Kategori</th>
         </tr>
         @foreach (var item in Model)
-        {
+                                        {
             <tr>
                 <td>@item.Id</td>
                 <td>@item.Name</td>

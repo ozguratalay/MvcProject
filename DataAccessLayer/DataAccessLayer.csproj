@@ -92,6 +92,14 @@
     <Compile Include="Migrations\202211291619591_OWriterStatus.designer.cs">
       <DependentUpon>202211291619591_OWriterStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212011723502_OContentStatus.cs" />
+    <Compile Include="Migrations\202212011723502_OContentStatus.designer.cs">
+      <DependentUpon>202212011723502_OContentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212011739180_OHeadingStatus.cs" />
+    <Compile Include="Migrations\202212011739180_OHeadingStatus.designer.cs">
+      <DependentUpon>202212011739180_OHeadingStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -123,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211291619591_OWriterStatus.resx">
       <DependentUpon>202211291619591_OWriterStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212011723502_OContentStatus.resx">
+      <DependentUpon>202212011723502_OContentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212011739180_OHeadingStatus.resx">
+      <DependentUpon>202212011739180_OHeadingStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
