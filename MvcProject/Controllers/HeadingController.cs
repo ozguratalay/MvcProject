@@ -64,6 +64,7 @@ namespace MvcProject.Controllers
         public ActionResult DeleteHeading(int id)
         {
             var headingValue = hm.GetById(id);
+            headingValue.Status = false;
             hm.HeadingDelete(headingValue);
             return RedirectToAction("Index");
         }
