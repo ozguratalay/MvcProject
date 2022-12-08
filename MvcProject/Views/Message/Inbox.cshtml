@@ -1,24 +1,8 @@
-﻿@model List<EntityLayer.Concrete.Contact>
+﻿@model List<EntityLayer.Concrete.Message>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inbox";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
-
-<link href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
-<!-- Ionicons -->
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<!-- icheck bootstrap -->
-<link href="~/AdminLTE-3.0.4/plugins/icheck-bootstrap/icheck-bootstrap.min.css" rel="stylesheet" />
-<!-- Theme style -->
-<link href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css" rel="stylesheet" />
-<!-- Google Font: Source Sans Pro -->
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +23,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @Html.Action("ContactPartial","Contact")
+            @Html.Action("ContactPartial", "Contact")
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
@@ -86,20 +70,21 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                    <tr>
-                                        <td>
-                                            <div class="icheck-primary">
-                                                <input type="checkbox" value="" id="check1">
-                                                <label for="check1"></label>
-                                            </div>
-                                        </td>
-                                        <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                        <td class="mailbox-name"><a href="#">@item.UserName</a></td>
-                                        <td class="mailbox-subject"><a href="/Contact/GetContactDetails/@item.Id"><b>@item.Subject</b> - @item.Message.Substring(0,30)...</a>                                           
-                                        </td>
-                                        <td class="mailbox-attachment"></td>
-                                        <td class="mailbox-date">5 mins ago</td>
-                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="icheck-primary">
+                                                    <input type="checkbox" value="" id="check1">
+                                                    <label for="check1"></label>
+                                                </div>
+                                            </td>
+                                            <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="#">@item.SenderMail</a></td>
+                                            <td class="mailbox-subject">
+                                                <a href="/Contact/GetContactDetails/@item.Id"><b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...</a>
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">5 mins ago</td>
+                                        </tr>
                                     }
                                 </tbody>
                             </table>
@@ -142,4 +127,5 @@
 
 </body>
 </html>
+
 
