@@ -15,6 +15,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.SenderMail).MaximumLength(50).WithMessage("50 karakterden fazla giriş yapılamaz!");
             RuleFor(x => x.ReceiverMail).NotEmpty().WithMessage("Boş bırakılamaz!");
             RuleFor(x => x.ReceiverMail).MaximumLength(50).WithMessage("50 karakterden fazla giriş yapılamaz!");
+            RuleFor(x => x.ReceiverMail).EmailAddress().WithMessage("Geçerli bir mail adresi giriniz!");
             RuleFor(x => x.Subject).NotEmpty().WithMessage("Boş bırakılamaz!");
             RuleFor(x => x.Subject).MaximumLength(100).WithMessage("100 karakterden fazla giriş yapılamaz!");
         }
