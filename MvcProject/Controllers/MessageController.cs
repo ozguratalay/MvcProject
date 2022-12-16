@@ -23,6 +23,12 @@ namespace MvcProject.Controllers
             var messageValues = mm.GetListSendbox();
             return View(messageValues);
         }
+
+        public ActionResult GetInboxMessageDetails(int id)
+        {
+            var values = mm.GetById(id);
+            return View(values);
+        }
         public ActionResult NewMessage()
         {
             return View();

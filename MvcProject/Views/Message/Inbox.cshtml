@@ -77,10 +77,10 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="#">@item.SenderMail</a></td>
+                                            <td class="mailbox-star"><a href="/Message/GetInboxMessageDetails/@item.Id"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Message/GetInboxMessageDetails/@item.Id">@item.SenderMail</a></td>
                                             <td class="mailbox-subject">
-                                                <a href="/Contact/GetContactDetails/@item.Id"><b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...</a>
+                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">5 mins ago</td>
