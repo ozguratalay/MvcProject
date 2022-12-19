@@ -106,6 +106,10 @@
     <Compile Include="Migrations\202212081110308_OMessageClass.designer.cs">
       <DependentUpon>202212081110308_OMessageClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212191935217_ContactDateAdd.cs" />
+    <Compile Include="Migrations\202212191935217_ContactDateAdd.designer.cs">
+      <DependentUpon>202212191935217_ContactDateAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -146,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212081110308_OMessageClass.resx">
       <DependentUpon>202212081110308_OMessageClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212191935217_ContactDateAdd.resx">
+      <DependentUpon>202212191935217_ContactDateAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -11,8 +11,8 @@ namespace BusinessLayer.ValidationRules
     public class MessageValidator: AbstractValidator<Message>
     {
         public MessageValidator() {
-            RuleFor(x => x.SenderMail).NotEmpty().WithMessage("Boş bırakılamaz!");
-            RuleFor(x => x.SenderMail).MaximumLength(50).WithMessage("50 karakterden fazla giriş yapılamaz!");
+            //RuleFor(x => x.SenderMail).NotEmpty().WithMessage("Boş bırakılamaz!");
+            //RuleFor(x => x.SenderMail).MaximumLength(50).WithMessage("50 karakterden fazla giriş yapılamaz!");
             RuleFor(x => x.ReceiverMail).NotEmpty().WithMessage("Boş bırakılamaz!");
             RuleFor(x => x.ReceiverMail).MaximumLength(50).WithMessage("50 karakterden fazla giriş yapılamaz!");
             RuleFor(x => x.ReceiverMail).EmailAddress().WithMessage("Geçerli bir mail adresi giriniz!");

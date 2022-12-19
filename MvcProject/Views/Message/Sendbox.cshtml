@@ -80,10 +80,10 @@
                                             <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                                             <td class="mailbox-name"><a href="#">@item.ReceiverMail</a></td>
                                             <td class="mailbox-subject">
-                                                <a href="/Contact/GetContactDetails/@item.Id"><b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...</a>
+                                                <a href="/Message/GetSendMessageDetails/@item.Id"><b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...</a>
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">5 mins ago</td>
+                                            <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
                                         </tr>
                                     }
                                 </tbody>
